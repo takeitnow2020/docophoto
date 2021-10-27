@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="css/css2.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Prikolchiki</title>
+</head>
+
+<body>
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '498340274621118');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="tr"></noscript>
+<!-- End Facebook Pixel Code -->
+    <div class="wrapper">
+        <h1 class="main-title">
+            Сервис по созданию шуточных документов
+        </h1>
+        <form action="#" class="main-form">
+            <div class="person-details">
+                <div class="person__top-details">
+                    <label for="input-userName" class="name-label">Ваше имя: (Пусто = рандом)</label>
+                    <input id="input-userName" type="text" class="primary-input" name="userName" value>
+                    <label for="input-userSurname" class="name-label">Ваша фамилия: (Пусто = рандом)</label>
+                    <input id="input-userSurname" type="text" class="primary-input" name="userLastName" value>
+                    <label for="input-userFather" class="name-label">Ваше отчество: (Пусто = рандом)</label>
+                    <input id="input-userFather" type="text" class="primary-input" name="userFName" value>
+                </div>
+                <div class="person__bottom-details">
+                    <label for="date" class="name-label">Ваша дата рождения: (Пусто = рандом)</label>
+                    <input type="date" id="date" class="primary-input" name="dateB" value>
+                </div>
+            </div>
+            <div class="selection-form">
+                <div class="selection-gender">
+                    <p>
+                        Выбор пола: (Пусто = рандом)
+                    </p>
+                    <input type="radio" value="male" name="gender" id="male">
+                    <label for="male">Мужчина</label>
+                    <input type="radio" value="female" name="gender" id="female">
+                    <label for="female">Женщина</label>
+                </div>
+                <div class="selection-photo-scale">
+                    <input type="radio" value="scale__true" name="scale__toggle" id="scale__true">
+                    <label for="scale__true">Отражать по горизонтали</label>
+                    <input type="radio" value="scale__false" name="scale__toggle" id="scale__false">
+                    <label for="scale__false">Не отражать по горизонтали</label>
+                    <input type="radio" value="scale__random" name="scale__toggle" id="scale__random">
+                    <label for="scale__random">Рандомный выбор</label>
+                </div>
+            </div>
+            <div class="btn-container">
+                <button type="submit" class="create-button">
+                    Создать документ
+                </button>
+            </div>
+
+        </form>
+        <div class="btn-container">
+            <button id="make_canvas">
+                Скомпилировать документ
+            </button>
+        </div>
+        <div class="document">
+            <img src="#" alt id="person_background" class="background-image">
+            <div class="document-text">
+                <div class="document-header">
+                    <div class="person-face">
+                        <img class="person-face__image" src="images/person.webp" alt>
+                    </div>
+                    <div class="userData">
+                        <div class="user-list">
+                            <div class="user-item">
+                                <div id="document-surname" class="item-info">
+
+                                </div>
+                                <div id="document-transleSurname" class="item-info translate_info">
+
+                                </div>
+                            </div>
+                            <div class="user-item">
+                                <div id="document-user" class="item-info">
+
+                                </div>
+                                <div id="document-transleUser" class="item-info translate_info">
+
+                                </div>
+                            </div>
+                            <div class="user-item">
+
+                                <div id="patronymic" class="item-info">
+
+                                </div>
+                            </div>
+                            <div class="double-column">
+                                <div class="first-column">
+                                    <div class="column-item">
+
+                                        <div class="sex-label item-info" id="sex">
+
+                                        </div>
+                                    </div>
+                                    <div class="column-item">
+
+                                        <div class="date-label item-info" id="date_label">
+
+                                        </div>
+                                    </div>
+                                    <div class="column-item">
+
+                                        <div class="date-label item-info" id="expired_data">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="second-column">
+                                    <div class="column-item">
+                                    </div>
+                                    <div class="column-item">
+
+                                        <div class="date-label item-info" id="record_data">
+
+                                        </div>
+                                    </div>
+                                    <div class="column-item">
+
+                                        <div class="date-label item-info" id="document_data">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-sign">
+                            <img id="user_sign" src="#" alt>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <script src="js/html2canvas.min.js">
+        </script>
+        <script src="js/main.js"></script>
+</body>
+
+</html>
