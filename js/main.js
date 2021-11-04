@@ -366,7 +366,7 @@ async function getInput() {
 
         } ).then(canvas => {
             //canvas_document.appendChild(canvas)
-            saveAs(canvas.toDataURL(), 'doc.png');
+            saveAs(canvas.toDataURL(), 'doc.jpg');
         })
     })
 }
